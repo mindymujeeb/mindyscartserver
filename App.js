@@ -3,8 +3,11 @@ dotenv.config({path:'./config.env'});
 require('./Controller/DBConnect');
 const express = require('express');
 const RestApi = require('./Controller/RESTFulApi');
-
 const app = express();
+
+const cors = require('cors');
+
+app.use(cors());
 
 const PORT = process.env.PORT;
 
