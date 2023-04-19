@@ -19,12 +19,12 @@ Router.get("/database", async (req, resp) => {
  
  // update data using params
  Router.patch("/database/:name",async(req,resp) => {
-   const data =await statusCollection.findOneAndUpdate(
-     req.params.name,
-     req.body
-   );
-   resp.send(data);
- });
+    const data =await statusCollection.findOneAndUpdate(
+      req.params.name,
+      req.body
+    );
+    resp.send(data);
+  });
  
  // delete data by using name
  Router.delete("/database/:name",async(req,resp) => {
